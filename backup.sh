@@ -15,7 +15,7 @@ waitCount=0;
 
 # Run a command inside nexus container
 run () {
-  docker exec -it nexus-backup-test-nexus-1 $1;
+  docker exec -u root -it nexus-backup-test-nexus-1 bash -c "$@";
 }
 
 # Copy a file from nexus container to local
